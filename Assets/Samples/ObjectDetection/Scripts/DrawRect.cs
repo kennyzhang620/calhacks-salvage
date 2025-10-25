@@ -29,7 +29,7 @@ public class DrawRect : MonoBehaviour
         
         UIRectObject rectangle = _rectangleObjects[index];
         rectangle.SetRectTransform(rect);
-        rectangle.SetColor(color);
+      //  rectangle.SetColor(color);
         rectangle.SetText(text);
         rectangle.gameObject.SetActive(true);
     }

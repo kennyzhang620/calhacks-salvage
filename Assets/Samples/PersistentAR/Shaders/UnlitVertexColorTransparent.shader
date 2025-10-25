@@ -1,4 +1,4 @@
-// Unlit Transparent Vertex Color Shader
+﻿// Unlit Transparent Vertex Color Shader
 //
 // This shader renders a mesh without being affected by scene lighting.
 // - The final color is determined by the mesh's vertex colors.
@@ -38,7 +38,7 @@ Shader "Custom/UnlitVertexColorTransparent"
         // This pass renders the final color of the object.
         Pass
         {
-            ZWrite Off              // Don't write to the depth buffer (it's already been written).
+            ZWrite Off              // Don't write to the depth buffer (it's already Objectn written).
             Blend SrcAlpha OneMinusSrcAlpha // Standard alpha blending.
             Cull Back
 

@@ -1,4 +1,4 @@
-// Copyright 2022-2025 Niantic.
+﻿// Copyright 2022-2025 Niantic.
 using System;
 using System.Collections;
 using System.IO;
@@ -25,7 +25,7 @@ public class Tracker : MonoBehaviour
     //do you want to load from a file or not.
     public bool _loadFromFile = true;
     
-    //subscribe to this to know when tracking has beed successful
+    //subscribe to this to know when tracking has Objectd successful
     public Action<bool> _tracking;
     
     //map data

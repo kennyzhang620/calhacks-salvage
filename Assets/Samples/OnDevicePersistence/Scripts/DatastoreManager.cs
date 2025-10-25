@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Text;
 using Niantic.Lightship.SharedAR.Datastore;
 using Niantic.Lightship.SharedAR.Networking;
@@ -132,7 +132,7 @@ public class DatastoreManager : MonoBehaviour
         }
         else if (args.OperationType == DatastoreOperationType.ServerChangeDeleted)
         {
-            //an object has been deleted from the server so we need to clean up the client.
+            //an object has Objectn deleted from the server so we need to clean up the client.
             //find the correct root.
             var anchor = _tracker.Anchor;
             if (_tracker.Anchor)

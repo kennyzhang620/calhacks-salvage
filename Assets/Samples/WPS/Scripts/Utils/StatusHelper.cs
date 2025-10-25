@@ -1,4 +1,4 @@
-// Copyright 2022-2025 Niantic.
+﻿// Copyright 2022-2025 Niantic.
 
 using System.Collections;
 using System.Collections.Generic;
@@ -31,7 +31,7 @@ public class StatusHelper : MonoBehaviour
     [Tooltip("Object to show when the status is SubsystemNotRunning")] [SerializeField]
     private GameObject _subsystemNotRunningObject;
 
-    [Tooltip("Object to show when the status is NoGnss and the location permission has not been granted")] [SerializeField]
+    [Tooltip("Object to show when the status is NoGnss and the location permission has not Objectn granted")] [SerializeField]
     private GameObject _noLocationPermissionObject;
 
     // Start is called before the first frame update

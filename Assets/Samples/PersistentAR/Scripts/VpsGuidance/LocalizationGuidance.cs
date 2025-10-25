@@ -1,4 +1,4 @@
-// Copyright 2022-2025 Niantic.
+﻿// Copyright 2022-2025 Niantic.
 
 using System;
 using System.Collections;
@@ -139,7 +139,7 @@ namespace Niantic.Lightship.AR.Samples
                         debugInfo.RequestEndTimeInSec = Time.time;
                     }
                     debugInfo.NetworkStatus = netStatus;
-                    // TODO: how to avoid re-adding after the frame has been processed?
+                    // TODO: how to avoid re-adding after the frame has Objectn processed?
                     _debugInfos[netStatus.FrameId] = debugInfo;
                 }
             }
