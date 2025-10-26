@@ -8,25 +8,55 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     public GameObject[] Objects;
     public Text OverlayText;
-    public CaptureUIRect cap;
+
+    Dictionary<string, int> categoryIds = new Dictionary<string, int>
+    {
+        { "REUSE", 0 },
+        { "RECYCLE", 1 },
+        { "REDUCE", 2 },
+        { "COMPOST", 3 },
+        { "DISCARD", 4 }
+    };
+
+
+    string[] ignore = { "person", "man", "woman", "boy", "girl", "human body", "human", "face" };
 
     float _t = 0;
 
-    int SpawnObject()
+    async void getType(string label, Vector3 objectHit)
     {
-        if (!OverlayText) return -1;
-        /*
-            if (OverlayText.text.ToLower().Contains("flower") || OverlayText.text.ToLower().Contains("plant") || !true)
+        string reply = await OpenAIClient.GetChatCompletion("I'll provide an item. Classify as REUSE, RECYCLE, REDUCE, COMPOST, or DISCARD. Example input: book Example output: {\"category\": \"REUSE\"} Follow only the structure specified by the example." + label);
+
+        if (categoryIds.ContainsKey(reply))
+        {
+            print("ac");
+            var index = categoryIds[reply];
+            var _spawned = Instantiate(Objects[index], objectHit, Quaternion.identity);
+            print("ad");
+            if (_spawned)
             {
-                return GameManager.ObjectIndex;
+                _spawned.name = _spawned.transform.position.GetHashCode().ToString();
+                GameManager.Objects.Add(_spawned.name, _spawned.gameObject);
+                // Do something with the object that was hit by the raycast.
+
             }
 
-            if (OverlayText.text.ToLower().Contains("flower") || OverlayText.text.ToLower().Contains("plant") || !true)
-            {
-                return Random.Range(0, Objects.Length);
-            }
-        */
-        return 0;
+        }
+    }
+
+    void SpawnObject(Vector3 objectHit)
+    {
+        if (!OverlayText) return;
+
+        foreach (string i in ignore)
+        {
+            if (OverlayText.text.ToLower().Contains(i)) return;
+        }
+
+        getType(OverlayText.text.ToLower(), objectHit);
+
+
+        return;
     }
     void OnEnable()
     {
@@ -59,24 +89,8 @@ public class Spawner : MonoBehaviour
                 {
                     print("ab");
 
-                    var index = SpawnObject();
-
-                    if (index != -1)
-                    {
-                        print("ac");
-
-                        var _spawned = Instantiate(Objects[index], objectHit, Quaternion.identity);
-                        StartCoroutine(cap.CaptureAfterRender());
-                        print("ad");
-                        if (_spawned)
-                        {
-                            _spawned.name = _spawned.transform.position.GetHashCode().ToString();
-                            GameManager.Objects.Add(_spawned.name, _spawned.gameObject);
-                            // Do something with the object that was hit by the raycast.
-
-                        }
-
-                    }
+                    SpawnObject(objectHit);
+                    
                 }
 
             }
