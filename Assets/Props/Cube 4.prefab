@@ -120,9 +120,10 @@ GameObject:
   - component: {fileID: 5921216264981365319}
   - component: {fileID: 5466502570466186726}
   - component: {fileID: 3850117307412040026}
+  - component: {fileID: 7836620462452157810}
   m_Layer: 0
   m_Name: Cube 4
-  m_TagString: Untagged
+  m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -218,6 +219,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7836620462452157810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6590921646956539470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e08a9627a0b0445cb11ac5e952c2d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text1: {fileID: 0}
+  SetText: Garbage, also known as trash or refuse, refers to unwanted, discarded
+    solid waste that is typically non-recyclable or non-compostable. This heterogeneous
+    waste stream is most commonly disposed of in landfills or through incineration.
+    Proper waste management, including the 3 R's and composting, aims to significantly
+    minimize the amount of material designated as garbage.
 --- !u!1 &9016437339210579566
 GameObject:
   m_ObjectHideFlags: 0

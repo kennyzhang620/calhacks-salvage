@@ -169,6 +169,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 2510546cf79614544959fb03311cc061, type: 3}
+      propertyPath: m_TagString
+      value: Interact
+      objectReference: {fileID: 0}
     - target: {fileID: -5477749408508380018, guid: 2510546cf79614544959fb03311cc061, type: 3}
       propertyPath: m_LocalScale.x
       value: 142.6599
@@ -212,6 +216,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 2510546cf79614544959fb03311cc061, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7252264961845208990}
+    - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 2510546cf79614544959fb03311cc061, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7497063725653224055}
+    - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 2510546cf79614544959fb03311cc061, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4497321236459114452}
   m_SourcePrefab: {fileID: 100100000, guid: 2510546cf79614544959fb03311cc061, type: 3}
 --- !u!1 &2792730382934777648 stripped
 GameObject:
@@ -240,6 +250,45 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7497063725653224055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2792730382934777648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e08a9627a0b0445cb11ac5e952c2d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text1: {fileID: 0}
+  SetText: Reduce is the most effective environmental strategy, focusing on decreasing
+    the amount of waste created in the first place. It involves making conscious
+    choices to consume fewer goods, buy durable products, and reject unnecessary
+    packaging. Reducing consumption lessens the demand for raw materials and the
+    energy used in manufacturing and transport.
+--- !u!65 &4497321236459114452
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2792730382934777648}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999998, y: 0.019999998, z: 0.019999998}
+  m_Center: {x: -5.820766e-11, y: 0, z: 0.0000000059371814}
 --- !u!4 &3082467164292893375 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2510546cf79614544959fb03311cc061, type: 3}

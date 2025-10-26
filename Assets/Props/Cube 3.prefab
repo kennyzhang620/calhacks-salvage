@@ -169,6 +169,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 3c05d8261310b4474becf7055fda5397, type: 3}
+      propertyPath: m_TagString
+      value: Interact
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3c05d8261310b4474becf7055fda5397, type: 3}
       propertyPath: m_Name
       value: compost
@@ -216,6 +220,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3c05d8261310b4474becf7055fda5397, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2573857741618681671}
+    - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 3c05d8261310b4474becf7055fda5397, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1685279632911543385}
+    - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 3c05d8261310b4474becf7055fda5397, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4125797702631551827}
   m_SourcePrefab: {fileID: 100100000, guid: 3c05d8261310b4474becf7055fda5397, type: 3}
 --- !u!4 &4721086748321225559 stripped
 Transform:
@@ -249,3 +259,47 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &5585151364608216792 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: 3c05d8261310b4474becf7055fda5397, type: 3}
+  m_PrefabInstance: {fileID: 5047992157315595452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1685279632911543385
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5585151364608216792}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.020000001, y: 0.019999996, z: 0.07191722}
+  m_Center: {x: 0, y: -9.2223544e-17, z: -0.025958616}
+--- !u!114 &4125797702631551827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5585151364608216792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e08a9627a0b0445cb11ac5e952c2d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text1: {fileID: 0}
+  SetText: "Composting is the natural process of decomposing organic matter\u2014like
+    food scraps and yard waste\u2014into a nutrient-rich soil amendment. This aerobic
+    (oxygen-dependent) decomposition reduces the volume of municipal solid waste
+    sent to landfills and mitigates methane gas production. The resulting humus can
+    be used to enrich garden soil, improving fertility and water retention."

@@ -50,7 +50,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6590921646956539470}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -119,15 +119,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 8be2358a7b3864b238d7a24883cb1533, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.8683
+      value: 0.7123454
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8be2358a7b3864b238d7a24883cb1533, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.8683
+      value: 0.7123454
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8be2358a7b3864b238d7a24883cb1533, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.9107962
+      value: 0.3472684
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8be2358a7b3864b238d7a24883cb1533, type: 3}
       propertyPath: m_LocalPosition.x
@@ -135,11 +135,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8be2358a7b3864b238d7a24883cb1533, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.02
+      value: -1.05
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8be2358a7b3864b238d7a24883cb1533, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.5000001
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8be2358a7b3864b238d7a24883cb1533, type: 3}
       propertyPath: m_LocalRotation.w
@@ -214,8 +214,16 @@ PrefabInstance:
       value: recy
       objectReference: {fileID: 0}
     - target: {fileID: 1290268953411352940, guid: 8be2358a7b3864b238d7a24883cb1533, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 166
+      objectReference: {fileID: 0}
+    - target: {fileID: 1290268953411352940, guid: 8be2358a7b3864b238d7a24883cb1533, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 166
+      objectReference: {fileID: 0}
+    - target: {fileID: 1290268953411352940, guid: 8be2358a7b3864b238d7a24883cb1533, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.11
+      value: 3.34
       objectReference: {fileID: 0}
     - target: {fileID: 1290268953411352940, guid: 8be2358a7b3864b238d7a24883cb1533, type: 3}
       propertyPath: m_LocalPosition.y
@@ -241,6 +249,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8416272007918961125, guid: 8be2358a7b3864b238d7a24883cb1533, type: 3}
+      propertyPath: m_TagString
+      value: Interact
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -248,6 +260,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8be2358a7b3864b238d7a24883cb1533, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7241563121558739625}
+    - targetCorrespondingSourceObject: {fileID: 8416272007918961125, guid: 8be2358a7b3864b238d7a24883cb1533, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4322917859460799774}
+    - targetCorrespondingSourceObject: {fileID: 8416272007918961125, guid: 8be2358a7b3864b238d7a24883cb1533, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3003312876938006365}
   m_SourcePrefab: {fileID: 100100000, guid: 8be2358a7b3864b238d7a24883cb1533, type: 3}
 --- !u!4 &187134715729429335 stripped
 Transform:
@@ -281,3 +299,47 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &8205265749986370905 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8416272007918961125, guid: 8be2358a7b3864b238d7a24883cb1533, type: 3}
+  m_PrefabInstance: {fileID: 365477068853421244}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &4322917859460799774
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8205265749986370905}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.043258414, y: 0.0357253, z: 0.15274334}
+  m_Center: {x: -0.0012852942, y: 1.4271224e-16, z: 0.010042485}
+--- !u!114 &3003312876938006365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8205265749986370905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e08a9627a0b0445cb11ac5e952c2d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text1: {fileID: 0}
+  SetText: Recycle is the process of collecting and processing materials that would
+    otherwise be thrown away as trash and turning them into new products. This diverts
+    valuable materials from landfills, such as paper, plastic, glass, and aluminum.
+    The process requires energy, but typically less than what's needed to create
+    new items from virgin resources.

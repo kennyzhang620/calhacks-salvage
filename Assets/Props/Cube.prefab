@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3659494220072182076}
   - component: {fileID: 5921216264981365319}
   - component: {fileID: 5466502570466186726}
-  - component: {fileID: 3850117307412040026}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -88,27 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3850117307412040026
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6590921646956539470}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &8819564998723859912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -157,6 +135,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: f707ae6c0e9794ea08604aaf231ba18f, type: 3}
+      propertyPath: m_TagString
+      value: Interact
+      objectReference: {fileID: 0}
     - target: {fileID: -5477749408508380018, guid: f707ae6c0e9794ea08604aaf231ba18f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -89.53987
@@ -173,6 +155,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: reuse
       objectReference: {fileID: 0}
+    - target: {fileID: 1290268953411352940, guid: f707ae6c0e9794ea08604aaf231ba18f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 166
+      objectReference: {fileID: 0}
+    - target: {fileID: 1290268953411352940, guid: f707ae6c0e9794ea08604aaf231ba18f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 166
+      objectReference: {fileID: 0}
+    - target: {fileID: 1290268953411352940, guid: f707ae6c0e9794ea08604aaf231ba18f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 166
+      objectReference: {fileID: 0}
     - target: {fileID: 8632055958874330854, guid: f707ae6c0e9794ea08604aaf231ba18f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -184,7 +178,73 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f707ae6c0e9794ea08604aaf231ba18f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3812554200053867678}
+    - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: f707ae6c0e9794ea08604aaf231ba18f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6043177823782422653}
+    - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: f707ae6c0e9794ea08604aaf231ba18f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6102230989867745377}
+    - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: f707ae6c0e9794ea08604aaf231ba18f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8183989149634568914}
   m_SourcePrefab: {fileID: 100100000, guid: f707ae6c0e9794ea08604aaf231ba18f, type: 3}
+--- !u!1 &8208091999398873004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: f707ae6c0e9794ea08604aaf231ba18f, type: 3}
+  m_PrefabInstance: {fileID: 8819564998723859912}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &6043177823782422653
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8208091999398873004}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.046464212, y: 0.039125808, z: 0.46747804}
+  m_Center: {x: -0.0021621794, y: -0.004130695, z: 0.12613912}
+--- !u!114 &6102230989867745377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8208091999398873004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e08a9627a0b0445cb11ac5e952c2d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text1: {fileID: 0}
+  SetText: 'Reuse is the act '
+--- !u!114 &8183989149634568914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8208091999398873004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e08a9627a0b0445cb11ac5e952c2d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text1: {fileID: 0}
+  SetText: Reuse is the practice of using an item again for its original purpose
+    or a new one, extending its lifespan. This method conserves resources, energy,
+    and money by avoiding the need to manufacture new products. Examples include
+    refilling a water bottle, using old jars for storage, or donating clothes.
 --- !u!1 &8548969479586597017 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f707ae6c0e9794ea08604aaf231ba18f, type: 3}

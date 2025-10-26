@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Cube
   - DummyRoot
+  - Interact
   layers:
   - Default
   - TransparentFX
