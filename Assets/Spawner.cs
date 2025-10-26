@@ -46,7 +46,7 @@ public class Spawner : MonoBehaviour
 
     async void voiceType(string label)
     {
-        string reply = await GeminiClient.GetChatCompletion("Write out a nagging message with emotion in two lines warning on the potential amount of items to be reused, recycled, reduced or composed, emphasizing based on how frequent of the type exists:" + label  + "Only generate the message, nothing else. No astricks or markdown, just natural speech. ");
+        string reply = await GeminiClient.GetChatCompletion("Write out a roasting message in two lines warning on the potential amount of items to be reused, recycled, reduced or composed, emphasizing based on how frequent of the type exists:" + label  + "Only generate the message, nothing else. No astricks or markdown, just natural speech. ");
         print(reply);
         if (reply != null) GameManager.SaySpeak = reply;
     }
@@ -64,7 +64,7 @@ public class Spawner : MonoBehaviour
 
         GameManager.detectedThings.Add(OverlayText.text.ToLower());
 
-        if (GameManager.detectedThings.Count % 2 == 0)
+        if (GameManager.detectedThings.Count % 3 == 0)
         {
             voiceType(string.Join(", ", GameManager.detectedThings));
         }
