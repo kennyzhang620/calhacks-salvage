@@ -9,9 +9,11 @@ public static class GameManager
     public static int ObjectsActive = 0;
     public static int ObjectIndex = -1;
     public static int ObjectStored = -1;
-    public static int SpawnLimit = 6;
-    public static float[] APILimiter = { 6, 6 };
+    public static int SpawnLimit = 25;
+    public static float[] APILimiter = { 2, 2 };
     public static Dictionary<string, GameObject> Objects = new Dictionary<string, GameObject>();
+    public static List<string> detectedThings = new List<string>();
+    public static string SaySpeak = "";
 
     public static Vector3 anchorLocation;
 
@@ -19,6 +21,7 @@ public static class GameManager
     {
         foreach (var vr in Objects)
         {
+        
          //   Debug.Log((vr.Value.transform.position - v).magnitude);
             if (vr.Value && ((vr.Value.transform.position - v).magnitude < radi))
                 return vr.Value;
@@ -31,7 +34,7 @@ public static class GameManager
     {
         if (APILimiter[c] <= 0)
         {
-            APILimiter[c] = 6;
+            APILimiter[c] = 2;
             return true;
         }
 

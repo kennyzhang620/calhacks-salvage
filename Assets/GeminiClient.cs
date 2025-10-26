@@ -10,7 +10,7 @@ public static class GeminiClient
     private static string apiUrl = "https://generativelanguage.googleapis.com/v1beta/models/{0}:generateContent?key={1}";
 
     // 🔹 Call this from anywhere: string reply = await GeminiClient.GenerateText("Write a Unity tutorial intro.");
-    public static async Task<string> GenerateText(string prompt, string model = "gemini-1.5-flash")
+    public static async Task<string> GetChatCompletion(string prompt, string model = "gemini-2.0-flash")
     {
         if (!GameManager.UseCredit(1)) return null;
         string url = string.Format(apiUrl, model, apiKey);

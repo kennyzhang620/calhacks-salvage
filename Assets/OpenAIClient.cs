@@ -8,7 +8,7 @@ public static class OpenAIClient
     private static readonly string apiUrl = "https://api.openai.com/v1/chat/completions";
 
     // ⚠️ Store your API key securely (e.g. environment variable, Unity Cloud secret, or external config)
-    private static string apiKey; 
+    private static string apiKey;
     // 🔹 Call this from anywhere: string reply = await OpenAIClient.GetChatCompletion("Hello there!");
     public static async Task<string> GetChatCompletion(string userMessage, string model = "gpt-4o-mini")
     {
@@ -49,11 +49,13 @@ public static class OpenAIClient
                 ChatResponse response = JsonUtility.FromJson<ChatResponse>(responseText);
 
                 // return assistant message
+                Debug.Log("nay");
                 return response.choices[0].message.content.Trim();
             }
             else
             {
-                Debug.LogError($"OpenAI Error: {request.responseCode}\n{request.error}\n{request.downloadHandler.text}");
+                Debug.Log("ah");
+                Debug.Log($"OpenAI Error: {request.responseCode}\n{request.error}\n{request.downloadHandler.text}");
                 return null;
             }
         }

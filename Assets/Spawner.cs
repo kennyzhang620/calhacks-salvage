@@ -25,9 +25,9 @@ public class Spawner : MonoBehaviour
 
     async void getType(string label, Vector3 objectHit)
     {
-        string reply = await OpenAIClient.GetChatCompletion("I'll provide an item. Classify as REUSE, RECYCLE, REDUCE, COMPOST, or DISCARD. Example input: book Example output: {\"category\": \"REUSE\"} Follow only the structure specified by the example." + label);
-
-        if (categoryIds.ContainsKey(reply))
+        string reply = await OpenAIClient.GetChatCompletion("I'll provide an item. Classify as REUSE, RECYCLE, REDUCE, COMPOST, or DISCARD. Example input: book Example output: REUSE   Follow only the structure specified by the example." + label);
+        print(reply);
+        if (reply != null && categoryIds.ContainsKey(reply))
         {
             print("ac");
             var index = categoryIds[reply];
@@ -44,6 +44,13 @@ public class Spawner : MonoBehaviour
         }
     }
 
+    async void voiceType(string label)
+    {
+        string reply = await GeminiClient.GetChatCompletion("Write out a nagging message with emotion in two lines warning on the potential amount of items to be reused, recycled, reduced or composed, emphasizing based on how frequent of the type exists:" + label  + "Only generate the message, nothing else. No astricks or markdown, just natural speech. ");
+        print(reply);
+        if (reply != null) GameManager.SaySpeak = reply;
+    }
+
     void SpawnObject(Vector3 objectHit)
     {
         if (!OverlayText) return;
@@ -54,6 +61,13 @@ public class Spawner : MonoBehaviour
         }
 
         getType(OverlayText.text.ToLower(), objectHit);
+
+        GameManager.detectedThings.Add(OverlayText.text.ToLower());
+
+        if (GameManager.detectedThings.Count % 2 == 0)
+        {
+            voiceType(string.Join(", ", GameManager.detectedThings));
+        }
 
 
         return;
@@ -77,12 +91,13 @@ public class Spawner : MonoBehaviour
             Vector3 objectHit = hit.point;
             print("a");
 
-            if ((Camera.main.transform.position - objectHit).magnitude > 0.078f && (Camera.main.transform.position - objectHit).magnitude < 1.5f )
+            if ((Camera.main.transform.position - objectHit).magnitude > 0.008f && (Camera.main.transform.position - objectHit).magnitude < 1.5f )
             {
 
-                var objectDetect = GameManager.CheckDuplicate(objectHit, 0.8f);
+                var objectDetect = GameManager.CheckDuplicate(objectHit, 0.4f);
                 if (objectDetect)
                 {
+                  //  objectDetect.transform.position = objectHit;
                     yield return null;
                 }
                 else
