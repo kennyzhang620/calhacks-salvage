@@ -1,5 +1,4 @@
-# Lightship ARDK Samples
-This Unity package provides Sample Scenes with easy-to-understand examples for many of the Lightship ARDK 3 features.
+# SmartCycle
 
 ## __Quick links:__
 * [ARDK API Reference](https://lightship.dev/docs/ardk/apiref/Niantic/)
@@ -13,7 +12,7 @@ Clone this repository or download the source code from the Releases tab and open
 In the Unity Editor, select the scene that uses the feature you'd like to reference and hit play.
 If you find yourself having problems using our samples, please refer to our [documentation page](https://lightship.dev/docs/ardk/sample_projects/) for more information.
 
-To build the samples on a mobile device, follow our [Setup Guide.](https://lightship.dev/docs/ardk/setup/#selecting-your-mobile-platform)
+To build on a mobile device, follow our [Setup Guide.](https://lightship.dev/docs/ardk/setup/#selecting-your-mobile-platform)
 
 # Recording Datasets for Playback
 AR Playback is a new, powerful feature for in-editor testing. The Recording sample will allow you to create your own dataset of an area near you. For more information, see [the Playback documentation](https://lightship.dev/docs/ardk/features/playback/).
