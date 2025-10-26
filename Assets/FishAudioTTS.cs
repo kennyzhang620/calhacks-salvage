@@ -33,7 +33,7 @@ public class FishAudioTTS : MonoBehaviour
 
             request.SetRequestHeader("Authorization", $"Bearer {API_KEY}");
             request.SetRequestHeader("Content-Type", "application/json");
-            request.SetRequestHeader("model", "s1");
+            request.SetRequestHeader("model", "54e3a85ac9594ffa83264b8a494b901b");
 
             var operation = request.SendWebRequest();
             while (!operation.isDone)
